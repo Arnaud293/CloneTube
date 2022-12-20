@@ -9,10 +9,10 @@ const App = () => (
     <Box sx={{backgroundColor: "black"}}>
       <Navbar />
       <Routes>
-        <Route to='/' element={<Feed/>} />
-        <Route to='/video/:id' element={<VideoDetails/>} />
-        <Route to='/channel/:id' element={<ChannelDetails/>} />
-        <Route to='/search/:searchTerm' element={<SearchFeed/>} />
+        <Route path='/' element={<Feed/>} />
+        <Route path='/video/:id' element={<VideoDetails/>} />
+        <Route path='/channel/:id' element={<ChannelDetails/>} />
+        <Route path='/search/:searchTerm' element={<SearchFeed/>} />
       </Routes>
     </Box>
   </BrowserRouter>
