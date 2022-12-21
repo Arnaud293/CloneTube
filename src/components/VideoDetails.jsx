@@ -15,7 +15,7 @@ const VideoDetails = () => {
   const [videos, setVideos] = useState(null)
 
   useEffect(() => {
-    fetchFromAPI(`/videos?part=snippet,statistics&id=${id}`)
+    fetchFromAPI(`videos?part=snippet,statistics&id=${id}`)
     .then((data) => setVideoDetail(data.items[0]));
 
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
@@ -45,10 +45,10 @@ const VideoDetails = () => {
                 </Link>
                 <Stack direction='row' gap='20px' alignItems='center'>
                   <Typography variant='body1' sx={{opacity: 0.7}}>
-                      {parsInt(viewCount).toLocaleString()} views
+                      {parseInt(viewCount).toLocaleString()} views
                   </Typography>
                   <Typography variant='body1' sx={{opacity: 0.7}}>
-                      {parsInt(likeCount).toLocaleString()} likes
+                      {parseInt(likeCount).toLocaleString()} likes
                   </Typography>
                 </Stack>
               </Stack>

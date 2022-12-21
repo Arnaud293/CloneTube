@@ -12,7 +12,7 @@ const [videos, setVideos] = useState([]);
 const {searchTerms} = useParams();
 
   useEffect(() => {
-    fetchFromAPI(`/search?part=snippet&q=${searchTerms}`)
+    fetchFromAPI(`search?part=snippet&q=${searchTerms}`)
     .then((data) => setVideos(data.items))
   },[searchTerms])
 
